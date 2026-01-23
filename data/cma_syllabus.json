@@ -1,0 +1,47 @@
+{
+  "Foundation": {
+    "Paper 1": {
+      "name": "Fundamentals of Business Laws and Business Communication",
+      "sections": {
+        "Business Laws": 80,
+        "Business Communication": 20
+      }
+    },
+    "Paper 2": {
+      "name": "Fundamentals of Financial and Cost Accounting",
+      "sections": {
+        "Financial Accounting": 70,
+        "Cost Accounting": 30
+      }
+    }
+  },
+
+  "Intermediate": {
+    "Paper 8": {
+      "name": "Cost Accounting",
+      "sections": {
+        "Introduction to Cost Accounting": 40,
+        "Methods of Costing": 30,
+        "Cost Accounting Techniques": 30
+      }
+    },
+    "Paper 12": {
+      "name": "Management Accounting",
+      "sections": {
+        "Decision Making Tools": 30,
+        "Standard Costing and Variance Analysis": 15,
+        "Budgetary Control": 15
+      }
+    }
+  },
+
+  "Final": {
+    "Paper 16": {
+      "name": "Strategic Cost Management",
+      "sections": {
+        "Strategic Cost Management": 60,
+        "Quantitative Techniques": 40
+      }
+    }
+  }
+}
