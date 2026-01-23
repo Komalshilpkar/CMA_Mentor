@@ -28,13 +28,22 @@ def ask_groq(question):
         temperature=0.6
     )
     return response.choices[0].message.content
+# 🔹 LOAD SYLLABUS (ADD HERE)
+SYLLABUS_PATH = os.path.join(os.getcwd(), "data", "cma_syllabus.json")
 
-# ---------------- LOAD SYLLABUS ----------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SYLLABUS_PATH = os.path.join(BASE_DIR, "data", "cma_syllabus.json")
+if not os.path.exists(SYLLABUS_PATH):
+    st.error("❌ cma_syllabus.json not found in data folder")
+    st.stop()
 
 with open(SYLLABUS_PATH, "r", encoding="utf-8") as f:
     SYLLABUS = json.load(f)
+
+  #---------------- LOAD SYLLABUS ----------------
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# SYLLABUS_PATH = os.path.join(BASE_DIR, "data", "cma_syllabus.json")
+
+# with open(SYLLABUS_PATH, "r", encoding="utf-8") as f:
+#     SYLLABUS = json.load(f)
 
 # ---------------- BUILD SYLLABUS KEYWORDS ----------------
 def build_keywords(syllabus):
@@ -328,4 +337,5 @@ if st.button("Ask Mentor"):
 # """
 #         response = llm(prompt)
 #         st.success(response[0]["generated_text"])
+
 
